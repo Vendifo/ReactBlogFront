@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-react-app
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: serve -s build
+    envVars:
+      NODE_ENV: production
